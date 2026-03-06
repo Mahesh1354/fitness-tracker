@@ -1,0 +1,25 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: fitness-mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: fitness_tracker
+      MYSQL_ROOT_PASSWORD: mahesh
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  app:
+    image: fitness-monolith:latest
+    container_name: fitness-app
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: jdbc:mysql://fitness-mysql:3306/fitness_tracker?useSSL=false&serverTimezone=UTC
+      DB_USER: root
+      DB_PASS: mahesh
+
+volumes:
+  mysql-data:
