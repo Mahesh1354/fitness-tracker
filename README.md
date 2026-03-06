@@ -1,10 +1,3 @@
-Mahesh, since your **Fitness Tracker Application currently has only the backend (Spring Boot)**, your README should focus on **REST APIs, backend architecture, database, and technologies**.
-
-Here is a **clean, professional backend-only README.md** you can **copy-paste directly**.
-
----
-
-
 # Fitness Tracker Application (Backend)
 
 A **Spring Boot REST API** for a Fitness Tracker Application that allows users to manage workout activities and track fitness records.  
